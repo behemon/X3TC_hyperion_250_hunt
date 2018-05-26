@@ -78,14 +78,15 @@ def press_ones_key(hex):
 
 
 def finish_quest_open_ship_info():
+    sleep(1.5)
     press_ones_key(0x2E)  # c
     press_ones_key(0x2E)  # c
     press_ones_key(0x2E)  # c
-    sleep(1)
+    sleep(1.5)
     press_ones_key(0x05)  # 4
     press_ones_key(0x02)  # 1
     press_ones_key(0x02)  # 1
-    sleep(1)
+    sleep(1.5)
     press_ones_key(0x26)  # l
     press_ones_key(0x1C)  # enter
     press_ones_key(0x1C)  # enter
@@ -143,7 +144,7 @@ def main(app_name):
         last_time = time.time()
         event = True
         load_game()
-        sleep(25)
+        sleep(26)
         # get_window_to_front(app_name)
         finish_quest_open_ship_info()
         sleep(1)
@@ -175,5 +176,6 @@ def update_file(log_file,data):
 if __name__ == "__main__":
     app_name = "X3TC"
     main(app_name)
+    # finish_quest_open_ship_info()
 
 
